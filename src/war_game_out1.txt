@@ -1,0 +1,27 @@
+Welcome to the Game of War!
+
+Now dealing cards to the players
+
+Player 1's Deck:
+SQueue: the array [Ace-of-Hearts, Seven-of-Diamonds, Jack-of-Spades, King-of-Clubs, Queen-of-Spades, Queen-of-Clubs, Five-of-Clubs, Seven-of-Hearts, Six-of-Diamonds, Nine-of-Diamonds, Ten-of-Hearts, Three-of-Clubs, Eight-of-Spades, Five-of-Hearts, Six-of-Clubs, Jack-of-Hearts, Seven-of-Clubs, Six-of-Spades, Nine-of-Hearts, Eight-of-Hearts, Two-of-Spades, Ten-of-Clubs, Ten-of-Spades, Four-of-Spades, Queen-of-Diamonds, Four-of-Clubs, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null] Capacity:53 Size:26 Read:0 Write:26
+
+Player 2's Deck:
+SQueue: the array [Ace-of-Diamonds, Ace-of-Spades, King-of-Diamonds, Queen-of-Hearts, Four-of-Diamonds, Five-of-Spades, Three-of-Hearts, Two-of-Diamonds, Eight-of-Clubs, Nine-of-Clubs, Six-of-Hearts, Eight-of-Diamonds, Two-of-Hearts, Seven-of-Spades, Ace-of-Clubs, Nine-of-Spades, Three-of-Spades, Three-of-Diamonds, Jack-of-Diamonds, Five-of-Diamonds, Ten-of-Diamonds, Four-of-Hearts, King-of-Spades, Jack-of-Clubs, King-of-Hearts, Two-of-Clubs, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null] Capacity:53 Size:26 Read:0 Write:26
+
+Starting the gamw of WAR!
+Max number of rounds = 10
+Round 0 WAR: Ace-of-Hearts ties Ace-of-Diamonds
+Face down
+Round 2 Player 2 Wins: Jack-of-Spades loses to King-of-Diamonds
+Round 3 Player 1 Wins: King-of-Clubs beats Queen-of-Hearts
+Round 4 Player 1 Wins: Queen-of-Spades beats Four-of-Diamonds
+Round 5 Player 1 Wins: Queen-of-Clubs beats Five-of-Spades
+Round 6 Player 1 Wins: Five-of-Clubs beats Three-of-Hearts
+Round 7 Player 1 Wins: Seven-of-Hearts beats Two-of-Diamonds
+Round 8 Player 2 Wins: Six-of-Diamonds loses to Eight-of-Clubs
+Round 9 WAR: Nine-of-Diamonds ties Nine-of-Clubs
+Face down
+After 10 rounds here are the results: 
+Player 1: 25 cards
+Player 2: 23 cards
+Player 1 Wins!

@@ -1,0 +1,105 @@
+=================================
+Testing constructor and queue methods
+=================================
+created an empty queue with 4 slots
+Queue after adding element  0
+SQueue: the array [0, null, null, null] Capacity:4 Size:1 Read:0 Write:1
+Queue after adding element  2
+SQueue: the array [0, 2, null, null] Capacity:4 Size:2 Read:0 Write:2
+Queue after adding element  4
+SQueue: the array [0, 2, 4, null] Capacity:4 Size:3 Read:0 Write:3
+ERROR: Cannot add element 6 The queue is full.
+Queue after dequeing element: 0
+SQueue: the array [null, 2, 4, null] Capacity:4 Size:2 Read:1 Write:3
+
+=================================
+Testing circular array management
+=================================
+Created an empty queue with 7 slots
+Queue after adding element  Item 1
+SQueue: the array [Item 1, null, null, null, null, null, null] Capacity:7 Size:1 Read:0 Write:1
+Queue after adding element  Item 2
+SQueue: the array [Item 1, Item 2, null, null, null, null, null] Capacity:7 Size:2 Read:0 Write:2
+Queue after adding element  Item 3
+SQueue: the array [Item 1, Item 2, Item 3, null, null, null, null] Capacity:7 Size:3 Read:0 Write:3
+Queue after adding element  Item 3 Copy
+SQueue: the array [Item 1, Item 2, Item 3, Item 3 Copy, null, null, null] Capacity:7 Size:4 Read:0 Write:4
+Queue after dequeing element Item 1
+SQueue: the array [null, Item 2, Item 3, Item 3 Copy, null, null, null] Capacity:7 Size:3 Read:1 Write:4
+Queue after adding element  Item 4
+SQueue: the array [null, Item 2, Item 3, Item 3 Copy, Item 4, null, null] Capacity:7 Size:4 Read:1 Write:5
+Queue after adding element  Item 4 Copy
+SQueue: the array [null, Item 2, Item 3, Item 3 Copy, Item 4, Item 4 Copy, null] Capacity:7 Size:5 Read:1 Write:6
+Queue after dequeing element Item 2
+SQueue: the array [null, null, Item 3, Item 3 Copy, Item 4, Item 4 Copy, null] Capacity:7 Size:4 Read:2 Write:6
+Queue after adding element  Item 5
+SQueue: the array [null, null, Item 3, Item 3 Copy, Item 4, Item 4 Copy, Item 5] Capacity:7 Size:5 Read:2 Write:0
+Queue after adding element  Item 5 Copy
+SQueue: the array [Item 5 Copy, null, Item 3, Item 3 Copy, Item 4, Item 4 Copy, Item 5] Capacity:7 Size:6 Read:2 Write:1
+Queue after dequeing element Item 3
+SQueue: the array [Item 5 Copy, null, null, Item 3 Copy, Item 4, Item 4 Copy, Item 5] Capacity:7 Size:5 Read:3 Write:1
+Queue after adding element  Item 6
+SQueue: the array [Item 5 Copy, Item 6, null, Item 3 Copy, Item 4, Item 4 Copy, Item 5] Capacity:7 Size:6 Read:3 Write:2
+ERROR: The queue is full.
+Cannot add element Item 6 Copy
+SQueue: the array [Item 5 Copy, Item 6, null, Item 3 Copy, Item 4, Item 4 Copy, Item 5] Capacity:7 Size:6 Read:3 Write:2
+Queue after dequeing element Item 3 Copy
+SQueue: the array [Item 5 Copy, Item 6, null, null, Item 4, Item 4 Copy, Item 5] Capacity:7 Size:5 Read:4 Write:2
+Queue after adding element  Item 7
+SQueue: the array [Item 5 Copy, Item 6, Item 7, null, Item 4, Item 4 Copy, Item 5] Capacity:7 Size:6 Read:4 Write:3
+ERROR: The queue is full.
+Cannot add element Item 7 Copy
+SQueue: the array [Item 5 Copy, Item 6, Item 7, null, Item 4, Item 4 Copy, Item 5] Capacity:7 Size:6 Read:4 Write:3
+Queue after dequeing element Item 4
+SQueue: the array [Item 5 Copy, Item 6, Item 7, null, null, Item 4 Copy, Item 5] Capacity:7 Size:5 Read:5 Write:3
+Queue after adding element  Item 8
+SQueue: the array [Item 5 Copy, Item 6, Item 7, Item 8, null, Item 4 Copy, Item 5] Capacity:7 Size:6 Read:5 Write:4
+ERROR: The queue is full.
+Cannot add element Item 8 Copy
+SQueue: the array [Item 5 Copy, Item 6, Item 7, Item 8, null, Item 4 Copy, Item 5] Capacity:7 Size:6 Read:5 Write:4
+Queue after dequeing element Item 4 Copy
+SQueue: the array [Item 5 Copy, Item 6, Item 7, Item 8, null, null, Item 5] Capacity:7 Size:5 Read:6 Write:4
+Queue after adding element  Item 9
+SQueue: the array [Item 5 Copy, Item 6, Item 7, Item 8, Item 9, null, Item 5] Capacity:7 Size:6 Read:6 Write:5
+ERROR: The queue is full.
+Cannot add element Item 9 Copy
+SQueue: the array [Item 5 Copy, Item 6, Item 7, Item 8, Item 9, null, Item 5] Capacity:7 Size:6 Read:6 Write:5
+Queue after dequeing element Item 5
+SQueue: the array [Item 5 Copy, Item 6, Item 7, Item 8, Item 9, null, null] Capacity:7 Size:5 Read:0 Write:5
+Queue after adding element  Item 10
+SQueue: the array [Item 5 Copy, Item 6, Item 7, Item 8, Item 9, Item 10, null] Capacity:7 Size:6 Read:0 Write:6
+ERROR: The queue is full.
+Cannot add element Item 10 Copy
+SQueue: the array [Item 5 Copy, Item 6, Item 7, Item 8, Item 9, Item 10, null] Capacity:7 Size:6 Read:0 Write:6
+Queue after dequeing element Item 5 Copy
+SQueue: the array [null, Item 6, Item 7, Item 8, Item 9, Item 10, null] Capacity:7 Size:5 Read:1 Write:6
+Queue after adding element  Item 11
+SQueue: the array [null, Item 6, Item 7, Item 8, Item 9, Item 10, Item 11] Capacity:7 Size:6 Read:1 Write:0
+ERROR: The queue is full.
+Cannot add element Item 11 Copy
+SQueue: the array [null, Item 6, Item 7, Item 8, Item 9, Item 10, Item 11] Capacity:7 Size:6 Read:1 Write:0
+Queue after dequeing element Item 6
+SQueue: the array [null, null, Item 7, Item 8, Item 9, Item 10, Item 11] Capacity:7 Size:5 Read:2 Write:0
+Queue after adding element  Item 12
+SQueue: the array [Item 12, null, Item 7, Item 8, Item 9, Item 10, Item 11] Capacity:7 Size:6 Read:2 Write:1
+ERROR: The queue is full.
+Cannot add element Item 12 Copy
+SQueue: the array [Item 12, null, Item 7, Item 8, Item 9, Item 10, Item 11] Capacity:7 Size:6 Read:2 Write:1
+Queue after dequeing element Item 7
+SQueue: the array [Item 12, null, null, Item 8, Item 9, Item 10, Item 11] Capacity:7 Size:5 Read:3 Write:1
+SQueue: the array [Item 12, null, null, Item 8, Item 9, Item 10, Item 11] Capacity:7 Size:5 Read:3 Write:1
+There are 5 items in the queue
+
+=================================
+Testing Shufflable Interface
+=================================
+About to test shuffle method...
+ERROR: The queue is full.
+Cannot add element 9
+SQueue: the array [0, 1, 2, 3, 4, 5, 6, 7, 8, null] Capacity:10 Size:9 Read:0 Write:9
+Shuffling...
+SQueue: the array [8, 7, 6, 2, 3, 0, 4, 5, 1, null] Capacity:10 Size:9 Read:0 Write:9
+Removing 2 elements and adding 1
+SQueue: the array [null, null, 6, 2, 3, 0, 4, 5, 1, 22] Capacity:10 Size:8 Read:2 Write:0
+Shuffling again...
+SQueue: the array [null, null, 22, 2, 0, 6, 3, 4, 5, 1] Capacity:10 Size:8 Read:2 Write:0

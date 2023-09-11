@@ -1,0 +1,236 @@
+Welcome to the Game of War!
+
+Now dealing cards to the players
+
+Player 1's Deck:
+SQueue: the array [Ace-of-Hearts, Ace-of-Clubs, Queen-of-Diamonds, Six-of-Diamonds, Ten-of-Clubs, Three-of-Diamonds, Jack-of-Hearts, Ten-of-Spades, King-of-Spades, Five-of-Spades, Seven-of-Clubs, Eight-of-Hearts, Five-of-Diamonds, Six-of-Clubs, Eight-of-Diamonds, Six-of-Hearts, Seven-of-Diamonds, Eight-of-Clubs, Two-of-Clubs, Three-of-Clubs, Five-of-Hearts, Two-of-Hearts, Queen-of-Hearts, Ten-of-Diamonds, Ten-of-Hearts, Two-of-Diamonds, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null] Capacity:53 Size:26 Read:0 Write:26
+
+Player 2's Deck:
+SQueue: the array [Ace-of-Diamonds, King-of-Diamonds, Two-of-Spades, Three-of-Spades, Queen-of-Spades, Jack-of-Diamonds, Nine-of-Hearts, Seven-of-Hearts, Seven-of-Spades, Eight-of-Spades, Queen-of-Clubs, Four-of-Diamonds, Six-of-Spades, Five-of-Clubs, Nine-of-Spades, Jack-of-Spades, Ace-of-Spades, Three-of-Hearts, Four-of-Spades, Nine-of-Clubs, Four-of-Hearts, Nine-of-Diamonds, Jack-of-Clubs, King-of-Clubs, King-of-Hearts, Four-of-Clubs, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null] Capacity:53 Size:26 Read:0 Write:26
+
+Starting the gamw of WAR!
+Max number of rounds = 1000
+Round 0 WAR: Ace-of-Hearts ties Ace-of-Diamonds
+Face down
+Round 2 Player 1 Wins: Queen-of-Diamonds beats Two-of-Spades
+Round 3 Player 1 Wins: Six-of-Diamonds beats Three-of-Spades
+Round 4 Player 2 Wins: Ten-of-Clubs loses to Queen-of-Spades
+Round 5 Player 2 Wins: Three-of-Diamonds loses to Jack-of-Diamonds
+Round 6 Player 1 Wins: Jack-of-Hearts beats Nine-of-Hearts
+Round 7 Player 1 Wins: Ten-of-Spades beats Seven-of-Hearts
+Round 8 Player 1 Wins: King-of-Spades beats Seven-of-Spades
+Round 9 Player 2 Wins: Five-of-Spades loses to Eight-of-Spades
+Round 10 Player 2 Wins: Seven-of-Clubs loses to Queen-of-Clubs
+Round 11 Player 1 Wins: Eight-of-Hearts beats Four-of-Diamonds
+Round 12 Player 2 Wins: Five-of-Diamonds loses to Six-of-Spades
+Round 13 Player 1 Wins: Six-of-Clubs beats Five-of-Clubs
+Round 14 Player 2 Wins: Eight-of-Diamonds loses to Nine-of-Spades
+Round 15 Player 2 Wins: Six-of-Hearts loses to Jack-of-Spades
+Round 16 Player 2 Wins: Seven-of-Diamonds loses to Ace-of-Spades
+Round 17 Player 1 Wins: Eight-of-Clubs beats Three-of-Hearts
+Round 18 Player 2 Wins: Two-of-Clubs loses to Four-of-Spades
+Round 19 Player 2 Wins: Three-of-Clubs loses to Nine-of-Clubs
+Round 20 Player 1 Wins: Five-of-Hearts beats Four-of-Hearts
+Round 21 Player 2 Wins: Two-of-Hearts loses to Nine-of-Diamonds
+Round 22 Player 1 Wins: Queen-of-Hearts beats Jack-of-Clubs
+Round 23 Player 2 Wins: Ten-of-Diamonds loses to King-of-Clubs
+Round 24 Player 2 Wins: Ten-of-Hearts loses to King-of-Hearts
+Round 25 Player 2 Wins: Two-of-Diamonds loses to Four-of-Clubs
+Getting and shuffling the pile for Player 1
+Getting and shuffling the pile for Player 2
+Round 26 Player 1 Wins: Queen-of-Hearts beats Four-of-Clubs
+Round 27 Player 2 Wins: Eight-of-Clubs loses to King-of-Clubs
+Round 28 Player 1 Wins: Queen-of-Diamonds beats Eight-of-Spades
+Round 29 Player 2 Wins: Five-of-Clubs loses to Ten-of-Hearts
+Round 30 Player 1 Wins: King-of-Spades beats Jack-of-Diamonds
+Round 31 Player 2 Wins: Eight-of-Hearts loses to Nine-of-Diamonds
+Round 32 Player 1 Wins: Ace-of-Clubs beats Two-of-Clubs
+Round 33 Player 2 Wins: Seven-of-Hearts loses to Ten-of-Clubs
+Round 34 Player 2 Wins: Four-of-Diamonds loses to Six-of-Hearts
+Round 35 Player 1 Wins: Seven-of-Spades beats Three-of-Clubs
+Round 36 Player 1 Wins: Ten-of-Spades beats Four-of-Spades
+Round 37 Player 1 Wins: Ace-of-Hearts beats Five-of-Spades
+Round 38 Player 1 Wins: King-of-Diamonds beats Nine-of-Clubs
+Round 39 Player 2 Wins: Six-of-Diamonds loses to Seven-of-Diamonds
+Round 40 Player 1 Wins: Four-of-Hearts beats Two-of-Hearts
+Round 41 Player 2 Wins: Three-of-Spades loses to Eight-of-Diamonds
+Round 42 Player 2 Wins: Jack-of-Hearts loses to Queen-of-Clubs
+Round 43 Player 2 Wins: Six-of-Clubs loses to Jack-of-Spades
+Round 44 WAR: Ace-of-Diamonds ties Ace-of-Spades
+Face down
+Round 46 Player 2 Wins: Three-of-Hearts loses to Six-of-Spades
+Round 47 Player 2 Wins: Two-of-Spades loses to Queen-of-Spades
+Round 48 WAR: Nine-of-Hearts ties Nine-of-Spades
+Face down
+Getting and shuffling the pile for Player 1
+Round 50 Player 2 Wins: Four-of-Hearts loses to Seven-of-Clubs
+Round 51 Player 2 Wins: Two-of-Hearts loses to Ten-of-Diamonds
+Round 52 Player 2 Wins: Seven-of-Spades loses to King-of-Hearts
+Round 53 Player 1 Wins: Nine-of-Clubs beats Two-of-Diamonds
+Getting and shuffling the pile for Player 2
+Round 54 Player 2 Wins: Four-of-Spades loses to King-of-Hearts
+Round 55 Player 1 Wins: Queen-of-Hearts beats Nine-of-Hearts
+Round 56 Player 1 Wins: Ace-of-Clubs beats Ten-of-Diamonds
+Round 57 Player 2 Wins: Two-of-Clubs loses to Nine-of-Diamonds
+Round 58 WAR: Eight-of-Spades ties Eight-of-Clubs
+Face down
+Round 60 Player 2 Wins: Three-of-Clubs loses to Queen-of-Spades
+Round 61 Player 2 Wins: Four-of-Clubs loses to Six-of-Hearts
+Round 62 Player 2 Wins: Ten-of-Spades loses to Jack-of-Hearts
+Round 63 Player 2 Wins: Five-of-Spades loses to Ace-of-Spades
+Round 64 Player 1 Wins: Ace-of-Hearts beats Two-of-Spades
+Round 65 Player 1 Wins: Jack-of-Diamonds beats Three-of-Spades
+Round 66 Player 1 Wins: King-of-Spades beats Queen-of-Clubs
+Round 67 Player 1 Wins: King-of-Diamonds beats Six-of-Clubs
+Getting and shuffling the pile for Player 1
+Round 68 Player 1 Wins: King-of-Diamonds beats Seven-of-Diamonds
+Round 69 Player 1 Wins: Nine-of-Clubs beats Eight-of-Diamonds
+Round 70 Player 1 Wins: Ace-of-Clubs beats Six-of-Spades
+Round 71 Player 2 Wins: Three-of-Spades loses to Eight-of-Hearts
+Round 72 Player 2 Wins: Two-of-Diamonds loses to Jack-of-Spades
+Round 73 Player 2 Wins: Queen-of-Hearts loses to Ace-of-Diamonds
+Round 74 Player 1 Wins: Ten-of-Diamonds beats Five-of-Clubs
+Round 75 Player 2 Wins: Nine-of-Hearts loses to Ten-of-Clubs
+Round 76 Player 1 Wins: King-of-Spades beats Three-of-Hearts
+Round 77 Player 2 Wins: Two-of-Spades loses to Seven-of-Hearts
+Round 78 Player 1 Wins: Ace-of-Hearts beats Five-of-Hearts
+Round 79 Player 2 Wins: Jack-of-Diamonds loses to King-of-Clubs
+Round 80 Player 1 Wins: Queen-of-Clubs beats Four-of-Diamonds
+Round 81 WAR: Six-of-Clubs ties Six-of-Diamonds
+Getting and shuffling the pile for Player 1
+Face down
+Round 83 Player 2 Wins: Four-of-Diamonds loses to Seven-of-Clubs
+Round 84 Player 2 Wins: Five-of-Hearts loses to Nine-of-Spades
+Round 85 Player 2 Wins: Seven-of-Diamonds loses to Jack-of-Clubs
+Round 86 Player 1 Wins: Ace-of-Clubs beats Five-of-Diamonds
+Round 87 Player 1 Wins: Five-of-Clubs beats Two-of-Hearts
+Round 88 Player 1 Wins: Ten-of-Diamonds beats Three-of-Diamonds
+Round 89 Player 2 Wins: Six-of-Spades loses to Seven-of-Spades
+Getting and shuffling the pile for Player 2
+Round 90 Player 1 Wins: Eight-of-Diamonds beats Seven-of-Spades
+Round 91 Player 1 Wins: King-of-Diamonds beats Nine-of-Spades
+Round 92 Player 1 Wins: King-of-Spades beats Eight-of-Spades
+Round 93 Player 2 Wins: Three-of-Hearts loses to Five-of-Hearts
+Round 94 Player 1 Wins: Ace-of-Hearts beats Six-of-Clubs
+Round 95 Player 2 Wins: Nine-of-Clubs loses to Ace-of-Spades
+Getting and shuffling the pile for Player 1
+Round 96 Player 1 Wins: Ace-of-Hearts beats Jack-of-Spades
+Round 97 Player 2 Wins: Two-of-Hearts loses to Four-of-Hearts
+Round 98 Player 1 Wins: King-of-Spades beats Seven-of-Clubs
+Round 99 Player 2 Wins: Five-of-Clubs loses to Seven-of-Hearts
+Round 100 Player 2 Wins: Nine-of-Spades loses to Jack-of-Hearts
+Round 101 Player 2 Wins: Three-of-Diamonds loses to Four-of-Diamonds
+Round 102 Player 2 Wins: Eight-of-Diamonds loses to King-of-Clubs
+Round 103 Player 2 Wins: Eight-of-Spades loses to Nine-of-Hearts
+Round 104 Player 1 Wins: Ace-of-Clubs beats Queen-of-Diamonds
+Round 105 Player 2 Wins: Seven-of-Spades loses to Ten-of-Clubs
+Round 106 Player 1 Wins: Ten-of-Diamonds beats Eight-of-Hearts
+Round 107 Player 1 Wins: King-of-Diamonds beats Three-of-Spades
+Round 108 Player 1 Wins: Six-of-Clubs beats Two-of-Diamonds
+Round 109 Player 2 Wins: Five-of-Diamonds loses to Ten-of-Hearts
+Getting and shuffling the pile for Player 1
+Round 110 Player 2 Wins: Six-of-Clubs loses to Queen-of-Spades
+Round 111 WAR: Two-of-Diamonds ties Two-of-Clubs
+Face down
+Round 113 Player 1 Wins: Queen-of-Diamonds beats Five-of-Spades
+Round 114 Player 1 Wins: Seven-of-Clubs beats Four-of-Clubs
+Round 115 Player 2 Wins: Eight-of-Hearts loses to Ten-of-Spades
+Round 116 Player 1 Wins: Ten-of-Diamonds beats Nine-of-Diamonds
+Round 117 WAR: Jack-of-Spades ties Jack-of-Diamonds
+Face down
+Round 119 Player 1 Wins: King-of-Spades beats Four-of-Spades
+Round 120 WAR: King-of-Diamonds ties King-of-Hearts
+Face down
+Getting and shuffling the pile for Player 1
+Round 122 Player 2 Wins: Six-of-Hearts loses to Queen-of-Hearts
+Round 123 Player 1 Wins: Ace-of-Hearts beats Six-of-Diamonds
+Round 124 Player 2 Wins: Two-of-Clubs loses to Three-of-Clubs
+Round 125 Player 2 Wins: Two-of-Diamonds loses to Ace-of-Diamonds
+Round 126 Player 1 Wins: Queen-of-Diamonds beats Two-of-Spades
+Round 127 Player 2 Wins: Three-of-Spades loses to Seven-of-Diamonds
+Round 128 Player 2 Wins: Nine-of-Diamonds loses to Jack-of-Clubs
+Round 129 Player 1 Wins: Jack-of-Diamonds beats Six-of-Spades
+Getting and shuffling the pile for Player 2
+Round 130 Player 2 Wins: Eight-of-Clubs loses to Jack-of-Clubs
+Round 131 Player 1 Wins: Seven-of-Clubs beats Five-of-Hearts
+Round 132 Player 2 Wins: Four-of-Spades loses to Ace-of-Clubs
+Round 133 Player 1 Wins: Ten-of-Diamonds beats Three-of-Spades
+Round 134 Player 1 Wins: King-of-Spades beats Two-of-Diamonds
+Round 135 WAR: Four-of-Clubs ties Four-of-Diamonds
+Face down
+Round 137 Player 2 Wins: Five-of-Spades loses to Queen-of-Spades
+Getting and shuffling the pile for Player 1
+Round 138 Player 1 Wins: King-of-Spades beats Two-of-Hearts
+Round 139 Player 2 Wins: Two-of-Diamonds loses to Ten-of-Hearts
+Round 140 Player 2 Wins: Three-of-Spades loses to Six-of-Hearts
+Round 141 Player 2 Wins: Six-of-Spades loses to Nine-of-Spades
+Round 142 WAR: Ace-of-Hearts ties Ace-of-Spades
+Face down
+Round 144 Player 2 Wins: Seven-of-Clubs loses to Nine-of-Hearts
+Round 145 Player 1 Wins: Jack-of-Diamonds beats Eight-of-Spades
+Round 146 Player 1 Wins: Ten-of-Diamonds beats Eight-of-Diamonds
+Round 147 Player 1 Wins: Queen-of-Diamonds beats Seven-of-Spades
+Round 148 Player 2 Wins: Two-of-Spades loses to King-of-Diamonds
+Round 149 Player 2 Wins: Five-of-Hearts loses to Queen-of-Hearts
+Getting and shuffling the pile for Player 1
+Round 150 Player 1 Wins: Queen-of-Diamonds beats Five-of-Diamonds
+Round 151 Player 1 Wins: Seven-of-Spades beats Five-of-Clubs
+Round 152 WAR: Ten-of-Diamonds ties Ten-of-Clubs
+Face down
+Round 154 Player 2 Wins: Eight-of-Spades loses to Ten-of-Spades
+Round 155 Player 2 Wins: Two-of-Hearts loses to Eight-of-Hearts
+Round 156 Player 2 Wins: Eight-of-Diamonds loses to King-of-Clubs
+Round 157 Player 1 Wins: King-of-Spades beats Six-of-Clubs
+Getting and shuffling the pile for Player 1
+Round 158 Player 1 Wins: King-of-Spades beats Seven-of-Hearts
+Round 159 Player 2 Wins: Five-of-Diamonds loses to Jack-of-Hearts
+Round 160 Player 1 Wins: Queen-of-Diamonds beats Three-of-Diamonds
+Round 161 Player 1 Wins: Six-of-Clubs beats Three-of-Hearts
+Round 162 Player 2 Wins: Seven-of-Spades loses to Queen-of-Clubs
+Round 163 Player 1 Wins: Five-of-Clubs beats Two-of-Clubs
+Getting and shuffling the pile for Player 1
+Round 164 Player 2 Wins: Five-of-Clubs loses to Ace-of-Diamonds
+Round 165 Player 1 Wins: King-of-Spades beats Three-of-Clubs
+Round 166 Player 1 Wins: Six-of-Clubs beats Four-of-Hearts
+Round 167 WAR: Seven-of-Hearts ties Seven-of-Diamonds
+Getting and shuffling the pile for Player 2
+Face down
+Round 169 Player 1 Wins: Queen-of-Diamonds beats Four-of-Spades
+Round 170 Player 2 Wins: Three-of-Hearts loses to Seven-of-Spades
+Round 171 Player 2 Wins: Two-of-Clubs loses to King-of-Clubs
+Getting and shuffling the pile for Player 1
+Round 172 Player 1 Wins: Ace-of-Diamonds beats Five-of-Diamonds
+Round 173 Player 2 Wins: Three-of-Diamonds loses to Four-of-Diamonds
+Round 174 Player 2 Wins: Three-of-Clubs loses to Eight-of-Hearts
+Round 175 Player 2 Wins: Four-of-Spades loses to Jack-of-Clubs
+Round 176 Player 2 Wins: Four-of-Hearts loses to Ten-of-Diamonds
+Round 177 Player 2 Wins: Six-of-Clubs loses to King-of-Diamonds
+Round 178 Player 1 Wins: Queen-of-Diamonds beats Ten-of-Clubs
+Round 179 WAR: Seven-of-Hearts ties Seven-of-Clubs
+Face down
+Round 181 Player 2 Wins: Seven-of-Diamonds loses to Nine-of-Hearts
+Getting and shuffling the pile for Player 1
+Round 182 Player 1 Wins: Five-of-Diamonds beats Two-of-Diamonds
+Round 183 Player 1 Wins: Ace-of-Diamonds beats Ten-of-Hearts
+Round 184 Player 2 Wins: Ten-of-Clubs loses to Jack-of-Spades
+Round 185 Player 1 Wins: Queen-of-Diamonds beats Three-of-Spades
+Getting and shuffling the pile for Player 1
+Round 186 Player 1 Wins: Queen-of-Diamonds beats Nine-of-Clubs
+Round 187 Player 2 Wins: Two-of-Diamonds loses to Six-of-Diamonds
+Round 188 Player 1 Wins: Ace-of-Diamonds beats Ten-of-Spades
+Round 189 Player 2 Wins: Five-of-Diamonds loses to Six-of-Hearts
+Round 190 Player 2 Wins: Ten-of-Hearts loses to Ace-of-Hearts
+Round 191 Player 1 Wins: Three-of-Spades beats Two-of-Spades
+Getting and shuffling the pile for Player 1
+Round 192 Player 2 Wins: Three-of-Spades loses to Nine-of-Diamonds
+Round 193 Player 2 Wins: Two-of-Spades loses to Five-of-Spades
+Round 194 Player 1 Wins: Ace-of-Diamonds beats Queen-of-Hearts
+Round 195 WAR: Queen-of-Diamonds ties Queen-of-Clubs
+Face down
+Round 197 WAR: Nine-of-Clubs ties Nine-of-Spades
+Getting and shuffling the pile for Player 1
+Face down
+Round 199 Player 2 Wins: Queen-of-Hearts loses to Ace-of-Spades
+
+Player 1 is out of cards!
+Player 2 Wins!!
