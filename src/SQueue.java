@@ -23,6 +23,11 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	//initialization of the internal array of predefined capacity
 	public SQueue (int capacity)	{		
 		// your code here
+		this.theArray = (T []) new Object[capacity + 1];
+		this.read = 0;
+		this.write = 0;
+		this.capacity = capacity;
+		this.size = 0;
 	}	
 	
 	public int getSize() {
@@ -34,7 +39,12 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	// of the queue
 	// if no element can be added - throw exception
 	public void enqueue(T newEntry) {
-		
+		if (isFull()) {
+			throw new FullQueueException();
+		}
+		theArray[write] = newEntry;
+		write = write + 1 % capacity;
+		size++;
 	}
 	  
 	//remove and return an element from the frony of the queue
@@ -45,20 +55,27 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	// though technically not needed,
 	//this will help you to see empty slots in theArray
 	public T dequeue() {
-		return null;
+		if (isEmpty()) {
+			throw new EmptyQueueException();
+		}
+		T front = this.getFront();
+		theArray[read] = null;
+		read = (read + 1) % capacity;
+		size--;
+		return front;
 		//replace the line above with your code
 	}
 	  
 	//Returns the entry at the front of this queue.
 	//throw  EmptyQueueException if the queue is empty. 
 	public T getFront() {
-		return null;
+		return theArray[read];
 		//replace the line above with your code
 	}
 	  
 	//Detect whether this queue is empty.
 	public boolean isEmpty() {	
-		return false;
+		return size == 0;
 		//replace the line above with your code
 	}
 	
@@ -66,14 +83,14 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	//this should prevent read and write indexes to become equal
 	
 	public boolean isFull() {
-		return false;
+		return size == capacity;
 		//replace the line above with your code
 	}
 	  
 	//Removes all entries from this queue. 
 	//think: can it potentially be done in one operation?
 	public void clear() {
-		
+		this = new SQueue<>(this.capacity);
 	}
 	
 	//implement the random reordering of the elements in theARray
@@ -83,7 +100,19 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	//be careful - you only need to shuffle elements 
 	//between read and write index - not including the unoccupied slots of the array.
 	public void shuffle() {
-		 
+		Random random = new Random();
+		for (int i = 0; i < size; i++) {
+			// generate 2 random numbers to swap
+			int first = random.nextInt(size);
+			int second = random.nextInt(size);
+			// convert random numbers to indices in array
+			int firstIndex = (read + first) % capacity;
+			int secondIndex = (read + second) % capacity;
+			// common swap
+			T temp = theArray[firstIndex];
+			theArray[firstIndex] = theArray[secondIndex];
+			theArray[secondIndex] = temp;
+		}
 	}
 	
 	//this is used for debugging and testing
