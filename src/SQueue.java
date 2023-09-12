@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class SQueue<T> implements QueueInterface<T>, Shufflable {
@@ -23,7 +24,7 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	//initialization of the internal array of predefined capacity
 	public SQueue (int capacity)	{		
 		// your code here
-		this.theArray = (T []) new Object[capacity + 1];
+		this.theArray = (T []) new Object[capacity];
 		this.read = 0;
 		this.write = 0;
 		this.capacity = capacity;
@@ -43,7 +44,7 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 			throw new FullQueueException();
 		}
 		theArray[write] = newEntry;
-		write = write + 1 % capacity;
+		write = (write + 1) % capacity;
 		size++;
 	}
 	  
@@ -83,14 +84,17 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	//this should prevent read and write indexes to become equal
 	
 	public boolean isFull() {
-		return size == capacity;
+		return size == capacity - 1;
 		//replace the line above with your code
 	}
 	  
 	//Removes all entries from this queue. 
 	//think: can it potentially be done in one operation?
 	public void clear() {
-		this = new SQueue<>(this.capacity);
+		Arrays.fill(theArray, null);
+		read = 0;
+		write = 0;
+		size = 0;
 	}
 	
 	//implement the random reordering of the elements in theARray
