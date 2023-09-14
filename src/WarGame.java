@@ -172,13 +172,16 @@ public class WarGame {
     }
 
     public void gameOver() {
-        System.out.println("After " + roundCounter + " rounds here are the results:");
-        System.out.println("Player 1: " + (leftHand.getSize() + leftDiscard.getSize()) + " cards.");
-        System.out.println("Player 2: " + (rightHand.getSize() + rightDiscard.getSize()) + " cards.");
+        int leftDeckSize = leftHand.getSize() + leftDiscard.getSize();
+        int rightDeckSize = rightHand.getSize() + rightDiscard.getSize();
 
-        if (leftHand.getSize() > rightHand.getSize()) {
+        System.out.println("After " + roundCounter + " rounds here are the results:");
+        System.out.println("Player 1: " + leftDeckSize + " cards.");
+        System.out.println("Player 2: " + rightDeckSize + " cards.");
+
+        if (leftDeckSize > rightDeckSize) {
             System.out.println("Player 1 wins!");
-        } else if (leftHand.getSize() < rightHand.getSize()) {
+        } else if (leftDeckSize < rightDeckSize) {
             System.out.println("Player 2 wins!");
         } else {
             System.out.println("It's a tie!");
