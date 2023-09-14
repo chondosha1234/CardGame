@@ -24,7 +24,7 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	//initialization of the internal array of predefined capacity
 	public SQueue (int capacity)	{		
 		// your code here
-		this.theArray = (T []) new Object[capacity];
+		this.theArray = (T []) new Object[capacity + 1];
 		this.read = 0;
 		this.write = 0;
 		this.capacity = capacity;

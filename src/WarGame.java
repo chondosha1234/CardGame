@@ -6,11 +6,12 @@ public class WarGame {
     private SQueue<Card> leftDiscard;
     private SQueue<Card> rightDiscard;
     private int rounds;
+    private int roundCounter;
 
     public static void main(String[] args) {
         // rounds will be -1 unless changed by cmd line args
         int rounds = -1;
-        if (args[0] != null) {
+        if (args.length != 0 && args[0] != null) {
             try {
                 rounds = Integer.parseInt(args[0]);
             } catch (NumberFormatException e) {
@@ -18,17 +19,29 @@ public class WarGame {
             }
         }
 
+        System.out.println("Welcome to the Game of War!");
         WarGame game = new WarGame(rounds);
+
+        System.out.println("Starting the Game of War!");
+        if (rounds >= 0) {
+            System.out.println("Max number of rounds: " + rounds);
+        } else {
+            System.out.println("Unlimited rounds!");
+        }
+
         while (!game.isGameOver()) {
             game.rounds--;
             game.nextTurn();
+            game.roundCounter++;
         }
+        game.gameOver();
     }
 
     public WarGame(int rounds) {
 
         this.rounds = rounds;
-        deck = new SQueue<>(52);
+        this.roundCounter = 0;
+        deck = new SQueue<>(53);
         for (Card.Suits suit : Card.Suits.values()) {
             for (Card.Ranks rank : Card.Ranks.values()) {
                 deck.enqueue(new Card(suit, rank));
@@ -42,6 +55,7 @@ public class WarGame {
         rightHand = new SQueue<>(52);
         rightDiscard = new SQueue<>(52);
 
+        System.out.println("Now dealing cards to players");
         Card nextCard;
         while (!deck.isEmpty()) {
             nextCard = deck.dequeue();
@@ -49,6 +63,13 @@ public class WarGame {
             nextCard = deck.dequeue();
             rightHand.enqueue(nextCard);
         }
+        System.out.println("leftHand size: " + leftHand.getSize());
+
+        System.out.println("Player 1's deck: ");
+        System.out.println(leftHand.toString());
+
+        System.out.println("Player 2's deck: ");
+        System.out.println(rightHand.toString());
     }
 
     public void nextTurn() {
@@ -63,14 +84,17 @@ public class WarGame {
         int comparison = leftCard.compareTo(rightCard);
         if (comparison > 0) {
             // left card wins fight
+            System.out.println("Round " + roundCounter + " Player 1 wins: " + leftCard + " beats " + rightCard);
             leftDiscard.enqueue(leftCard);
             leftDiscard.enqueue(rightCard);
         } else if (comparison < 0) {
             // player 2 wins fight
+            System.out.println("Round " + roundCounter + " Player 2 wins: " + rightCard + " beats " + leftCard);
             rightDiscard.enqueue(leftCard);
             rightDiscard.enqueue(rightCard);
         } else {
             //tie
+            System.out.println("Round " + roundCounter + " WAR: " + leftCard + " ties " + rightCard);
             int winner = resolveWar();
             if (winner == 0) {
                 leftDiscard.enqueue(leftCard);
@@ -94,6 +118,7 @@ public class WarGame {
             gameOver();
         }
 
+        System.out.println("Face Down");
         int comparison = leftCard.compareTo(rightCard);
         // if cards tie, recurse first and keep going, once there is a definite end each recursive level
         // will then move on and handle enqueueing cards at that level and return to nextTurn()
@@ -147,7 +172,17 @@ public class WarGame {
     }
 
     public void gameOver() {
+        System.out.println("After " + roundCounter + " rounds here are the results:");
+        System.out.println("Player 1: " + (leftHand.getSize() + leftDiscard.getSize()) + " cards.");
+        System.out.println("Player 2: " + (rightHand.getSize() + rightDiscard.getSize()) + " cards.");
 
+        if (leftHand.getSize() > rightHand.getSize()) {
+            System.out.println("Player 1 wins!");
+        } else if (leftHand.getSize() < rightHand.getSize()) {
+            System.out.println("Player 2 wins!");
+        } else {
+            System.out.println("It's a tie!");
+        }
     }
 
     public boolean playerWon(SQueue<Card> hand, SQueue<Card> discard) {
