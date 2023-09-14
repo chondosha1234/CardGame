@@ -75,8 +75,9 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	}
 	  
 	//Detect whether this queue is empty.
-	public boolean isEmpty() {	
-		return size == 0;
+	public boolean isEmpty() {
+		return read == write;
+		//return size == 0;
 		//replace the line above with your code
 	}
 	
@@ -84,7 +85,8 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	//this should prevent read and write indexes to become equal
 	
 	public boolean isFull() {
-		return size == capacity - 1;
+		return read == (write + 1) % capacity;
+		//return size == capacity - 1;
 		//replace the line above with your code
 	}
 	  
