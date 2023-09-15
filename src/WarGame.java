@@ -38,9 +38,12 @@ public class WarGame {
     }
 
     public WarGame(int rounds) {
-
         this.rounds = rounds;
         this.roundCounter = 0;
+        dealDeck();
+    }
+
+    public void dealDeck() {
         deck = new SQueue<>(53);
         for (Card.Suits suit : Card.Suits.values()) {
             for (Card.Ranks rank : Card.Ranks.values()) {
@@ -186,10 +189,6 @@ public class WarGame {
         } else {
             System.out.println("It's a tie!");
         }
-    }
-
-    public boolean playerWon(SQueue<Card> hand, SQueue<Card> discard) {
-        return (hand.getSize() + discard.getSize() == 52);
     }
 
     public boolean playerLost(SQueue<Card> hand, SQueue<Card> discard) {
