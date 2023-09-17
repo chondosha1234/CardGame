@@ -99,6 +99,7 @@ public class WarGame {
             //tie
             System.out.println("Round " + roundCounter + " WAR: " + leftCard + " ties " + rightCard);
             int winner = resolveWar();
+            // winner will return 0 for left (player 1) or 1 for right (player 2)
             if (winner == 0) {
                 leftDiscard.enqueue(leftCard);
                 leftDiscard.enqueue(rightCard);
@@ -145,6 +146,14 @@ public class WarGame {
     }
     
     public Card drawCard(SQueue<Card> hand, SQueue<Card> discard) {
+        // figure out player drawing for use in print statements
+        int player;
+        if (hand.equals(leftHand)) {
+            player = 1;
+        } else {
+            player = 2;
+        }
+
         Card card;
         try {
             card = hand.dequeue();
@@ -154,6 +163,7 @@ public class WarGame {
                 return null;
             }
             // take all discard pile into hand
+            System.out.println("Getting and shuffling the pile for Player " + player);
             while (!discard.isEmpty()){
                 hand.enqueue(discard.dequeue());
             }
@@ -175,20 +185,33 @@ public class WarGame {
     }
 
     public void gameOver() {
+
         int leftDeckSize = leftHand.getSize() + leftDiscard.getSize();
         int rightDeckSize = rightHand.getSize() + rightDiscard.getSize();
+        // if rounds hits 0, it means there was a set number, and it hit 0
+        // else rounds are set to negative, and it was unlimited rounds
+        if (rounds == 0) {
+            System.out.println("After " + roundCounter + " rounds here are the results:");
+            System.out.println("Player 1: " + leftDeckSize + " cards.");
+            System.out.println("Player 2: " + rightDeckSize + " cards.");
 
-        System.out.println("After " + roundCounter + " rounds here are the results:");
-        System.out.println("Player 1: " + leftDeckSize + " cards.");
-        System.out.println("Player 2: " + rightDeckSize + " cards.");
-
-        if (leftDeckSize > rightDeckSize) {
-            System.out.println("Player 1 wins!");
-        } else if (leftDeckSize < rightDeckSize) {
-            System.out.println("Player 2 wins!");
+            if (leftDeckSize > rightDeckSize) {
+                System.out.println("Player 1 wins!");
+            } else if (leftDeckSize < rightDeckSize) {
+                System.out.println("Player 2 wins!");
+            } else {
+                System.out.println("It's a tie!");
+            }
         } else {
-            System.out.println("It's a tie!");
+            if (leftDeckSize == 0) {
+                System.out.println("Player 1 is out of cards!");
+                System.out.println("Player 2 wins!!");
+            } else {
+                System.out.println("Player 2 is out of cards!");
+                System.out.println("Player 1 wins!!");
+            }
         }
+
     }
 
     public boolean playerLost(SQueue<Card> hand, SQueue<Card> discard) {
