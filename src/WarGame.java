@@ -44,7 +44,7 @@ public class WarGame {
     }
 
     public void dealDeck() {
-        deck = new SQueue<>(53);
+        deck = new SQueue<>(52);
         for (Card.Suits suit : Card.Suits.values()) {
             for (Card.Ranks rank : Card.Ranks.values()) {
                 deck.enqueue(new Card(suit, rank));
@@ -76,6 +76,10 @@ public class WarGame {
     }
 
     public void nextTurn() {
+        int leftDeckSize = leftHand.getSize() + leftDiscard.getSize();
+        int rightDeckSize = rightHand.getSize() + rightDiscard.getSize();
+        System.out.println("left deck size: " + leftDeckSize);
+        System.out.println("right deck size: " + rightDeckSize);
         //draw cards, if drawCard returns null, it means player lost
         Card leftCard = drawCard(leftHand, leftDiscard);
         Card rightCard = drawCard(rightHand, rightDiscard);
@@ -211,7 +215,7 @@ public class WarGame {
                 System.out.println("Player 1 wins!!");
             }
         }
-
+        System.exit(0);
     }
 
     public boolean playerLost(SQueue<Card> hand, SQueue<Card> discard) {
