@@ -24,10 +24,11 @@ public class SQueue<T> implements QueueInterface<T>, Shufflable {
 	//initialization of the internal array of predefined capacity
 	public SQueue (int capacity)	{		
 		// your code here
+		// add one to capacity to make  extra spot in circular array for end
 		this.theArray = (T []) new Object[capacity + 1];
+		this.capacity = capacity + 1;
 		this.read = 0;
 		this.write = 0;
-		this.capacity = capacity + 1;
 		this.size = 0;
 	}	
 	

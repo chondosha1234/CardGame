@@ -1,16 +1,16 @@
 public class WarGame {
 
-    private SQueue<Card> deck;
-    private SQueue<Card> leftHand;
-    private SQueue<Card> rightHand;
-    private SQueue<Card> leftDiscard;
-    private SQueue<Card> rightDiscard;
-    private int rounds;
-    private int roundCounter;
+    private static SQueue<Card> deck;
+    private static SQueue<Card> leftHand;
+    private static SQueue<Card> rightHand;
+    private static SQueue<Card> leftDiscard;
+    private static SQueue<Card> rightDiscard;
+    private static int rounds;
+    private static int roundCounter;
 
     public static void main(String[] args) {
         // rounds will be -1 unless changed by cmd line args
-        int rounds = -1;
+        rounds = -1;
         if (args.length != 0 && args[0] != null) {
             try {
                 rounds = Integer.parseInt(args[0]);
@@ -20,7 +20,7 @@ public class WarGame {
         }
 
         System.out.println("Welcome to the Game of War!");
-        WarGame game = new WarGame(rounds);
+        dealDeck();
 
         System.out.println("Starting the Game of War!");
         if (rounds >= 0) {
@@ -29,21 +29,15 @@ public class WarGame {
             System.out.println("Unlimited rounds!");
         }
 
-        while (!game.isGameOver()) {
-            game.rounds--;
-            game.nextTurn();
-            game.roundCounter++;
+        while (!isGameOver()) {
+            rounds--;
+            nextTurn();
+            roundCounter++;
         }
-        game.gameOver();
+        gameOver();
     }
 
-    public WarGame(int rounds) {
-        this.rounds = rounds;
-        this.roundCounter = 0;
-        dealDeck();
-    }
-
-    public void dealDeck() {
+    public static void dealDeck() {
         deck = new SQueue<>(52);
         for (Card.Suits suit : Card.Suits.values()) {
             for (Card.Ranks rank : Card.Ranks.values()) {
@@ -75,11 +69,7 @@ public class WarGame {
         System.out.println(rightHand.toString());
     }
 
-    public void nextTurn() {
-        int leftDeckSize = leftHand.getSize() + leftDiscard.getSize();
-        int rightDeckSize = rightHand.getSize() + rightDiscard.getSize();
-        System.out.println("left deck size: " + leftDeckSize);
-        System.out.println("right deck size: " + rightDeckSize);
+    public static void nextTurn() {
         //draw cards, if drawCard returns null, it means player lost
         Card leftCard = drawCard(leftHand, leftDiscard);
         Card rightCard = drawCard(rightHand, rightDiscard);
@@ -115,7 +105,7 @@ public class WarGame {
     }
 
     // return will be 0 if left wins and 1 if right wins
-    public int resolveWar() {
+    public static int resolveWar() {
         Card leftFaceDown = drawCard(leftHand, leftDiscard);
         Card rightFaceDown = drawCard(rightHand, rightDiscard);
 
@@ -149,7 +139,7 @@ public class WarGame {
         }
     }
     
-    public Card drawCard(SQueue<Card> hand, SQueue<Card> discard) {
+    public static Card drawCard(SQueue<Card> hand, SQueue<Card> discard) {
         // figure out player drawing for use in print statements
         int player;
         if (hand.equals(leftHand)) {
@@ -177,8 +167,8 @@ public class WarGame {
         return card;
     }
 
-    public boolean isGameOver() {
-        if (this.rounds == 0) {
+    public static boolean isGameOver() {
+        if (rounds == 0) {
             return true;
         } else if (playerLost(leftHand, leftDiscard)) {
             return true;
@@ -188,7 +178,7 @@ public class WarGame {
         return false;
     }
 
-    public void gameOver() {
+    public static void gameOver() {
 
         int leftDeckSize = leftHand.getSize() + leftDiscard.getSize();
         int rightDeckSize = rightHand.getSize() + rightDiscard.getSize();
@@ -218,7 +208,7 @@ public class WarGame {
         System.exit(0);
     }
 
-    public boolean playerLost(SQueue<Card> hand, SQueue<Card> discard) {
+    public static boolean playerLost(SQueue<Card> hand, SQueue<Card> discard) {
         return hand.isEmpty() && discard.isEmpty();
     }
 	
